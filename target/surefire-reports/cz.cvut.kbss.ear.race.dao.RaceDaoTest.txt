@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: cz.cvut.kbss.ear.race.dao.RaceDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.109 s <<< FAILURE! - in cz.cvut.kbss.ear.race.dao.RaceDaoTest
+findAllByCircuitReturnRacesOnSpecificCircuit  Time elapsed: 0.297 s  <<< ERROR!
+javax.persistence.PersistenceException: 
+Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Pro sloupec "MAXDRIVERS" není hodnota NULL povolena
+NULL not allowed for column "MAXDRIVERS"; SQL statement:
+INSERT INTO RACE (ID, MAXDRIVERS, NAME, RACE_DATE, CIRCUIT_ID, ORGANIZOR_USER_ID) VALUES (?, ?, ?, ?, ?, ?) [23502-200]
+Error Code: 23502
+Call: INSERT INTO RACE (ID, MAXDRIVERS, NAME, RACE_DATE, CIRCUIT_ID, ORGANIZOR_USER_ID) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [5, null, Race -1373992821, null, 2, null]
+Query: InsertObjectQuery(cz.cvut.kbss.ear.race.model.Race@52742778)
+	at cz.cvut.kbss.ear.race.dao.RaceDaoTest.findAllByCircuitReturnRacesOnSpecificCircuit(RaceDaoTest.java:43)
+Caused by: org.eclipse.persistence.exceptions.DatabaseException: 
+
+Internal Exception: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Pro sloupec "MAXDRIVERS" není hodnota NULL povolena
+NULL not allowed for column "MAXDRIVERS"; SQL statement:
+INSERT INTO RACE (ID, MAXDRIVERS, NAME, RACE_DATE, CIRCUIT_ID, ORGANIZOR_USER_ID) VALUES (?, ?, ?, ?, ?, ?) [23502-200]
+Error Code: 23502
+Call: INSERT INTO RACE (ID, MAXDRIVERS, NAME, RACE_DATE, CIRCUIT_ID, ORGANIZOR_USER_ID) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [5, null, Race -1373992821, null, 2, null]
+Query: InsertObjectQuery(cz.cvut.kbss.ear.race.model.Race@52742778)
+	at cz.cvut.kbss.ear.race.dao.RaceDaoTest.findAllByCircuitReturnRacesOnSpecificCircuit(RaceDaoTest.java:43)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: 
+Pro sloupec "MAXDRIVERS" není hodnota NULL povolena
+NULL not allowed for column "MAXDRIVERS"; SQL statement:
+INSERT INTO RACE (ID, MAXDRIVERS, NAME, RACE_DATE, CIRCUIT_ID, ORGANIZOR_USER_ID) VALUES (?, ?, ?, ?, ?, ?) [23502-200]
+	at cz.cvut.kbss.ear.race.dao.RaceDaoTest.findAllByCircuitReturnRacesOnSpecificCircuit(RaceDaoTest.java:43)
+

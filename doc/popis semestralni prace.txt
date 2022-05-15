@@ -1,0 +1,14 @@
+Semestrální práce EAR 
+
+Lukáš Přáda, Martin Rondoš
+
+Téma a popis: 
+
+Téma semestrální práce je aplikace pro Organizaci automobilových závodů. 
+Systém bude evidovat informace o závodnících, týmech, automobilech, okruzích a výsledky závodů. 
+Mezi jeho funkcionality patří možnost přihlásit se jako závodník, organizátor, redaktor nebo člen týmu. 
+Závodník má možnost zaregistrovat se do závodu, sledovat jeho počínání v šampionátu a detailní informace o uplynulých a nadcházejících závodech a přidat se k závodnímu týmu. 
+Člen týmu může upravovat informace o týmu a jeho vozidle, registrovat tým do závodu, přidat závodníky a členy týmu. 
+Organizátor může vytvářet a upravovat události (závody, testovací dny atd...) a schvalovat registrace do závodů. 
+Redaktor může vytvářet, mazat a editovat zprávy z jednotlivých akcích. Nepřihlášený uživatel má možnost se registrovat a následně přihlásit. 
+Nepřihlášený uživatel může číst zprávy a sledovat výsledky závodů. 
