@@ -117,9 +117,15 @@ public class UserController {
         return user;
     }
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    @PermitAll
     @PutMapping(value = "/{id}")
     public ResponseEntity<Void> updateUser(@PathVariable Integer id, @RequestBody User user) {
+        User current = securityUtils.getCurrentUser();
+        if(current.getId() != id){
+            LOG.error("Not updating current user.");
+            final HttpHeaders headers = RestUtils.createLocationHeaderFromCurrentUri("");
+            return new ResponseEntity<>(headers, HttpStatus.FORBIDDEN);
+        }
         User original_user = userService.find(id);
         user.setPassword(original_user.getPassword());
         user.setRole(original_user.getRole());
