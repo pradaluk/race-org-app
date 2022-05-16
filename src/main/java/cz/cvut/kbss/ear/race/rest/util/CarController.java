@@ -55,7 +55,7 @@ public class CarController {
     }
 
     @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-    @PutMapping(value = "/remove/{id}")
+    @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void removeCar(@PathVariable Integer id) {
         final Car original = getCarById(id);
