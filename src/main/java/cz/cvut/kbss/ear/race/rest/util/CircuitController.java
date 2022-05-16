@@ -34,7 +34,7 @@ public class CircuitController {
         return circuitService.findAll();
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ORGANIZER')")
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> addCircuit(@RequestBody Circuit circuit) {
         circuitService.persist(circuit);
