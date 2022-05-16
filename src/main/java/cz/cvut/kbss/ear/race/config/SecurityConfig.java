@@ -6,6 +6,7 @@ import cz.cvut.kbss.ear.race.security.DefaultAuthenticationProvider;
 import cz.cvut.kbss.ear.race.security.SecurityConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,6 +25,7 @@ import org.springframework.security.web.authentication.logout.LogoutSuccessHandl
 
 @Configuration
 @EnableWebSecurity
+@ComponentScan(basePackages = "cz.cvut.kbss.ear.race.security")
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)// Allow methods to be secured using annotation
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -81,7 +83,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/","/login");
+        web.ignoring().antMatchers("/","/login","/upcomingraces");
     }
 
 }

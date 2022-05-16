@@ -9,17 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import cz.cvut.kbss.ear.race.environment.Generator;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 // Spring runner for JUnit
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 // DataJpaTest does not load all the application beans, it starts only persistence-related stuff
 @DataJpaTest
 // Exclude SystemInitializer from the startup, we don't want the admin account here
@@ -27,6 +29,9 @@ import static org.junit.Assert.assertEquals;
 public class RaceDaoTest extends BaseDaoTestRunner{
     @PersistenceContext
     private EntityManager em;
+
+    @Autowired
+    DataSource dataSource;
 
     @Autowired
     private RaceDao sut;

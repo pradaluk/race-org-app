@@ -18,7 +18,6 @@ import java.util.Date;
 @SpringBootApplication
 public class RacingOrgApp {
     @Bean
-    @Scope("prototype")
     public Date personPrototype() {
         return new Date();
     }

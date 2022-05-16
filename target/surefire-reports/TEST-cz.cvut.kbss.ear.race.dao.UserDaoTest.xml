@@ -1,62 +1,1140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="0.422" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="1.705" tests="2" errors="2" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="17"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.class.path" value="E:\School\Bc\appka\pradaluk\target\test-classes;E:\School\Bc\appka\pradaluk\target\classes;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.3.RELEASE\spring-boot-starter-web-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.3.RELEASE\spring-boot-starter-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot\2.3.3.RELEASE\spring-boot-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.3.RELEASE\spring-boot-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.3.RELEASE\spring-boot-starter-logging-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\prada\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\prada\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\prada\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.3.RELEASE\spring-boot-starter-json-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.3.RELEASE\spring-boot-starter-tomcat-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.37\tomcat-embed-core-9.0.37.jar;C:\Users\prada\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.37\tomcat-embed-websocket-9.0.37.jar;C:\Users\prada\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-webmvc\5.2.8.RELEASE\spring-webmvc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.3.RELEASE\spring-boot-starter-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.3.RELEASE\spring-boot-starter-aop-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.3.RELEASE\spring-boot-starter-jdbc-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jdbc\5.2.8.RELEASE\spring-jdbc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\prada\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-jpa\2.3.3.RELEASE\spring-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-commons\2.3.3.RELEASE\spring-data-commons-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-orm\5.2.8.RELEASE\spring-orm-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-tx\5.2.8.RELEASE\spring-tx-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aspects\5.2.8.RELEASE\spring-aspects-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\2.7.7\org.eclipse.persistence.jpa-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.3\jakarta.persistence-2.2.3.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.7.7\org.eclipse.persistence.asm-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.7.7\org.eclipse.persistence.antlr-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\2.7.7\org.eclipse.persistence.jpa.jpql-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.7.7\org.eclipse.persistence.core-2.7.7.jar;C:\Users\prada\.m2\repository\org\postgresql\postgresql\42.2.14\postgresql-42.2.14.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.3.3.RELEASE\spring-boot-starter-security-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-config\5.3.4.RELEASE\spring-security-config-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.3.RELEASE\spring-boot-starter-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test\2.3.3.RELEASE\spring-boot-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.3.RELEASE\spring-boot-test-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\prada\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\prada\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\prada\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\prada\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\prada\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\prada\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\prada\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\prada\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\prada\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;C:\Users\prada\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\prada\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\prada\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\prada\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-test\5.2.8.RELEASE\spring-test-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-test\5.3.4.RELEASE\spring-security-test-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-core\5.3.4.RELEASE\spring-security-core-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-web\5.3.4.RELEASE\spring-security-web-5.3.4.RELEASE.jar;"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.class.path" value="E:\School\Bcc\bakalarka\appka\pradaluk\target\test-classes;E:\School\Bcc\bakalarka\appka\pradaluk\target\classes;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.3.RELEASE\spring-boot-starter-web-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.3.RELEASE\spring-boot-starter-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot\2.3.3.RELEASE\spring-boot-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.3.RELEASE\spring-boot-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.3.RELEASE\spring-boot-starter-logging-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\prada\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\prada\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\prada\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.3.RELEASE\spring-boot-starter-json-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.3.RELEASE\spring-boot-starter-tomcat-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.37\tomcat-embed-core-9.0.37.jar;C:\Users\prada\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.37\tomcat-embed-websocket-9.0.37.jar;C:\Users\prada\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-webmvc\5.2.8.RELEASE\spring-webmvc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.3.RELEASE\spring-boot-starter-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.3.RELEASE\spring-boot-starter-aop-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.3.RELEASE\spring-boot-starter-jdbc-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jdbc\5.2.8.RELEASE\spring-jdbc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\prada\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-jpa\2.3.3.RELEASE\spring-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-commons\2.3.3.RELEASE\spring-data-commons-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-orm\5.2.8.RELEASE\spring-orm-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-tx\5.2.8.RELEASE\spring-tx-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aspects\5.2.8.RELEASE\spring-aspects-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\2.7.7\org.eclipse.persistence.jpa-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.3\jakarta.persistence-2.2.3.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.7.7\org.eclipse.persistence.asm-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.7.7\org.eclipse.persistence.antlr-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\2.7.7\org.eclipse.persistence.jpa.jpql-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.7.7\org.eclipse.persistence.core-2.7.7.jar;C:\Users\prada\.m2\repository\org\postgresql\postgresql\42.2.14\postgresql-42.2.14.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.3.3.RELEASE\spring-boot-starter-security-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-config\5.3.4.RELEASE\spring-security-config-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.3.RELEASE\spring-boot-starter-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test\2.3.3.RELEASE\spring-boot-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.3.RELEASE\spring-boot-test-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\prada\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\prada\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\prada\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\prada\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\prada\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\prada\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\prada\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\prada\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\prada\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;C:\Users\prada\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\prada\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\prada\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\prada\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-test\5.2.8.RELEASE\spring-test-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-test\5.3.4.RELEASE\spring-security-test-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\prada\.m2\repository\org\apache\httpcomponents\httpclient\4.5.12\httpclient-4.5.12.jar;C:\Users\prada\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\prada\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-core\5.3.4.RELEASE\spring-security-core-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-web\5.3.4.RELEASE\spring-security-web-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\commons-dbcp\commons-dbcp\1.2.2\commons-dbcp-1.2.2.jar;C:\Users\prada\.m2\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
     <property name="user.timezone" value="Europe/Prague"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="os.name" value="Windows 10"/>
-    <property name="java.vm.specification.version" value="17"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CZ"/>
-    <property name="sun.boot.library.path" value="E:\Programs\Java\jdk-17.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\prada\AppData\Local\Temp\surefire6088258820296560168\surefirebooter12602398795668168314.jar C:\Users\prada\AppData\Local\Temp\surefire6088258820296560168 2022-04-07T11-29-48_651-jvmRun1 surefire6157554245213499605tmp surefire_016787720116837927612tmp"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\School\Bc\appka\pradaluk\target\test-classes;E:\School\Bc\appka\pradaluk\target\classes;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.3.RELEASE\spring-boot-starter-web-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.3.RELEASE\spring-boot-starter-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot\2.3.3.RELEASE\spring-boot-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.3.RELEASE\spring-boot-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.3.RELEASE\spring-boot-starter-logging-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\prada\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\prada\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\prada\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.3.RELEASE\spring-boot-starter-json-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.3.RELEASE\spring-boot-starter-tomcat-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.37\tomcat-embed-core-9.0.37.jar;C:\Users\prada\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.37\tomcat-embed-websocket-9.0.37.jar;C:\Users\prada\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-webmvc\5.2.8.RELEASE\spring-webmvc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.3.RELEASE\spring-boot-starter-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.3.RELEASE\spring-boot-starter-aop-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.3.RELEASE\spring-boot-starter-jdbc-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jdbc\5.2.8.RELEASE\spring-jdbc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\prada\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-jpa\2.3.3.RELEASE\spring-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-commons\2.3.3.RELEASE\spring-data-commons-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-orm\5.2.8.RELEASE\spring-orm-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-tx\5.2.8.RELEASE\spring-tx-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aspects\5.2.8.RELEASE\spring-aspects-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\2.7.7\org.eclipse.persistence.jpa-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.3\jakarta.persistence-2.2.3.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.7.7\org.eclipse.persistence.asm-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.7.7\org.eclipse.persistence.antlr-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\2.7.7\org.eclipse.persistence.jpa.jpql-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.7.7\org.eclipse.persistence.core-2.7.7.jar;C:\Users\prada\.m2\repository\org\postgresql\postgresql\42.2.14\postgresql-42.2.14.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.3.3.RELEASE\spring-boot-starter-security-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-config\5.3.4.RELEASE\spring-security-config-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.3.RELEASE\spring-boot-starter-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test\2.3.3.RELEASE\spring-boot-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.3.RELEASE\spring-boot-test-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\prada\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\prada\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\prada\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\prada\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\prada\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\prada\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\prada\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\prada\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\prada\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;C:\Users\prada\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\prada\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\prada\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\prada\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-test\5.2.8.RELEASE\spring-test-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-test\5.3.4.RELEASE\spring-security-test-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-core\5.3.4.RELEASE\spring-security-core-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-web\5.3.4.RELEASE\spring-security-web-5.3.4.RELEASE.jar;"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\prada\AppData\Local\Temp\surefire2514933470995554223\surefirebooter2396607431623917254.jar C:\Users\prada\AppData\Local\Temp\surefire2514933470995554223 2022-05-16T13-44-26_265-jvmRun1 surefire5811309484948353328tmp surefire_08365677177051627028tmp"/>
+    <property name="surefire.test.class.path" value="E:\School\Bcc\bakalarka\appka\pradaluk\target\test-classes;E:\School\Bcc\bakalarka\appka\pradaluk\target\classes;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.3.RELEASE\spring-boot-starter-web-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.3.RELEASE\spring-boot-starter-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot\2.3.3.RELEASE\spring-boot-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.3.RELEASE\spring-boot-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.3.RELEASE\spring-boot-starter-logging-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\prada\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\prada\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\prada\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\prada\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.3.RELEASE\spring-boot-starter-json-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.3.RELEASE\spring-boot-starter-tomcat-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.37\tomcat-embed-core-9.0.37.jar;C:\Users\prada\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\prada\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.37\tomcat-embed-websocket-9.0.37.jar;C:\Users\prada\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-webmvc\5.2.8.RELEASE\spring-webmvc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.3.RELEASE\spring-boot-starter-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.3.RELEASE\spring-boot-starter-aop-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.3.RELEASE\spring-boot-starter-jdbc-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jdbc\5.2.8.RELEASE\spring-jdbc-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\prada\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-jpa\2.3.3.RELEASE\spring-data-jpa-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\data\spring-data-commons\2.3.3.RELEASE\spring-data-commons-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-orm\5.2.8.RELEASE\spring-orm-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-tx\5.2.8.RELEASE\spring-tx-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aspects\5.2.8.RELEASE\spring-aspects-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\2.7.7\org.eclipse.persistence.jpa-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.3\jakarta.persistence-2.2.3.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\2.7.7\org.eclipse.persistence.asm-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.7.7\org.eclipse.persistence.antlr-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\2.7.7\org.eclipse.persistence.jpa.jpql-2.7.7.jar;C:\Users\prada\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.7.7\org.eclipse.persistence.core-2.7.7.jar;C:\Users\prada\.m2\repository\org\postgresql\postgresql\42.2.14\postgresql-42.2.14.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.3.3.RELEASE\spring-boot-starter-security-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-config\5.3.4.RELEASE\spring-security-config-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\prada\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.3.RELEASE\spring-boot-starter-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test\2.3.3.RELEASE\spring-boot-test-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.3.RELEASE\spring-boot-test-autoconfigure-2.3.3.RELEASE.jar;C:\Users\prada\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\prada\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\prada\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\prada\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\prada\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\prada\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\prada\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\prada\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\prada\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;C:\Users\prada\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\prada\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\prada\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;C:\Users\prada\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;C:\Users\prada\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\prada\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\prada\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\prada\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\prada\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-test\5.2.8.RELEASE\spring-test-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-test\5.3.4.RELEASE\spring-security-test-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\prada\.m2\repository\org\apache\httpcomponents\httpclient\4.5.12\httpclient-4.5.12.jar;C:\Users\prada\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\prada\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-core\5.3.4.RELEASE\spring-security-core-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar;C:\Users\prada\.m2\repository\org\springframework\security\spring-security-web\5.3.4.RELEASE\spring-security-web-5.3.4.RELEASE.jar;C:\Users\prada\.m2\repository\commons-dbcp\commons-dbcp\1.2.2\commons-dbcp-1.2.2.jar;C:\Users\prada\.m2\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;C:\Users\prada\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\prada"/>
     <property name="user.language" value="cs"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2021-10-19"/>
-    <property name="java.home" value="E:\Programs\Java\jdk-17.0.1"/>
+    <property name="java.home" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre"/>
+    <property name="basedir" value="E:\School\Bcc\bakalarka\appka\pradaluk"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="E:\School\Bc\appka\pradaluk"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\prada\AppData\Local\Temp\surefire6088258820296560168\surefirebooter12602398795668168314.jar"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\prada\AppData\Local\Temp\surefire2514933470995554223\surefirebooter2396607431623917254.jar;C:\\Users\\prada\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.5\\org.jacoco.agent-0.8.5-runtime.jar"/>
+    <property name="sun.boot.class.path" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\resources.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\rt.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\sunrsasign.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\jsse.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\jce.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\charsets.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\jfr.jar;C:\Users\prada\.jdks\corretto-1.8.0_322\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
+    <property name="java.runtime.version" value="1.8.0_322-b06"/>
     <property name="user.name" value="prada"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.endorsed.dirs" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="Cp1250"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\prada\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
     <property name="java.io.tmpdir" value="C:\Users\prada\AppData\Local\Temp\"/>
     <property name="idea.version" value="2021.2.3"/>
-    <property name="java.version" value="17.0.1"/>
-    <property name="user.dir" value="E:\School\Bc\appka\pradaluk"/>
+    <property name="java.version" value="1.8.0_322"/>
+    <property name="user.dir" value="E:\School\Bcc\bakalarka\appka\pradaluk"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="native.encoding" value="Cp1250"/>
-    <property name="java.library.path" value="E:\Programs\Java\jdk-17.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;E:\Programs\Git\cmd;d:\iracing\d3dgear;E:\Programs\MiKTeX\miktex\bin\x64\;E:\Programs\Gpg4win\..\GnuPG\bin;;C:\Program Files\dotnet\;;;;;;;;;;C:\Program Files (x86)\dotnet\;C:\Users\prada\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\prada\AppData\Local\Programs\Python\Python310\;C:\Users\prada\AppData\Local\Microsoft\WindowsApps;;E:\Programs\Microsoft VS Code\bin;."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
+    <property name="java.library.path" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;E:\Programs\Git\cmd;d:\iracing\d3dgear;E:\Programs\MiKTeX\miktex\bin\x64\;E:\Programs\Gpg4win\..\GnuPG\bin;;C:\Program Files\dotnet\;;;;;;;;;;C:\Program Files (x86)\dotnet\;E:\Programs\NodeJs\;;;C:\Users\prada\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\prada\AppData\Local\Programs\Python\Python310\;C:\Users\prada\AppData\Local\Microsoft\WindowsApps;;E:\Programs\Microsoft VS Code\bin;C:\Users\prada\AppData\Roaming\npm;C:\Program Files\heroku\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="25.322-b06"/>
+    <property name="java.ext.dirs" value="C:\Users\prada\.jdks\corretto-1.8.0_322\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="61.0"/>
+    <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="findByUsernameReturnsPersonWithMatchingUsername" classname="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="0.009"/>
-  <testcase name="findByUsernameReturnsNullForUnknownUsername" classname="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="0.005"/>
+  <testcase name="findByUsernameReturnsPersonWithMatchingUsername" classname="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="0">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+]]></error>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+16-05-2022 13:44:30.746 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - Starting UserDaoTest on DESKTOP-OI8RF7B with PID 18652 (started by prada in E:\School\Bcc\bakalarka\appka\pradaluk)
+16-05-2022 13:44:30.746 [main] DEBUG c.c.k.ear.race.dao.UserDaoTest - Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+16-05-2022 13:44:30.747 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - No active profile set, falling back to default profiles: default
+16-05-2022 13:44:30.811 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-05-2022 13:44:30.813 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+16-05-2022 13:44:30.821 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16-05-2022 13:44:30.833 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:c9cbcde8-e7ff-471a-8b89-bd349f3ec816;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16-05-2022 13:44:30.890 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[EL Info]: 2022-05-16 13:44:31.021--ServerSession(1015543859)--EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[EL Fine]: sql: 2022-05-16 13:44:31.029--ServerSession(1015543859)--Connection(2076947703)--ALTER TABLE RACE_CAR DROP CONSTRAINT FK_RACE_CAR_OWNER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.029--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.03--ServerSession(1015543859)--Connection(1414422473)--ALTER TABLE joinrequest DROP CONSTRAINT FK_joinrequest_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.03--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.03--ServerSession(1015543859)--Connection(497284385)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_CIRCUIT_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.03--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--Connection(1251379214)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_championship_id
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--Connection(1241306182)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_ORGANIZOR_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--Connection(1407457179)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_car_id
+[EL Fine]: sql: 2022-05-16 13:44:31.031--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.032--ServerSession(1015543859)--Connection(1231146728)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_driver_id
+[EL Fine]: sql: 2022-05-16 13:44:31.032--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.032--ServerSession(1015543859)--Connection(1814039253)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_race_id
+[EL Fine]: sql: 2022-05-16 13:44:31.032--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.033--ServerSession(1015543859)--Connection(261586719)--ALTER TABLE RACE_TEAM DROP CONSTRAINT FK_RACE_TEAM_owner
+[EL Fine]: sql: 2022-05-16 13:44:31.033--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.033--ServerSession(1015543859)--Connection(1001007658)--ALTER TABLE membership DROP CONSTRAINT FK_membership_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.033--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.034--ServerSession(1015543859)--Connection(1360780119)--ALTER TABLE membership DROP CONSTRAINT FK_membership_TEAM_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.034--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.034--ServerSession(1015543859)--Connection(217765203)--ALTER TABLE race_classes DROP CONSTRAINT FK_race_classes_Race_RACE_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.034--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.035--ServerSession(1015543859)--Connection(1940943586)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.035--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.035--ServerSession(1015543859)--Connection(1476339015)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.036--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.036--ServerSession(1015543859)--Connection(514927984)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.036--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.037--ServerSession(1015543859)--Connection(780328770)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.037--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.037--ServerSession(1015543859)--Connection(938511658)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.037--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.038--ServerSession(1015543859)--Connection(1073523938)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.038--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.038--ServerSession(1015543859)--Connection(1198986716)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.038--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.039--ServerSession(1015543859)--Connection(1924945846)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.039--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.039--ServerSession(1015543859)--Connection(646758447)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.039--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.04--ServerSession(1015543859)--Connection(1472270945)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.04--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.04--ServerSession(1015543859)--Connection(492114605)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.04--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.041--ServerSession(1015543859)--Connection(602857690)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.041--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.041--ServerSession(1015543859)--Connection(1969399067)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.041--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.041--ServerSession(1015543859)--Connection(940847431)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.042--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.042--ServerSession(1015543859)--Connection(837231086)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.042--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.042--ServerSession(1015543859)--Connection(1211128066)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.042--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.043--ServerSession(1015543859)--Connection(298299695)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.043--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.043--ServerSession(1015543859)--Connection(1002088829)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.044--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.044--ServerSession(1015543859)--Connection(28038637)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.044--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.044--ServerSession(1015543859)--Connection(1019838038)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.044--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.045--ServerSession(1015543859)--Connection(990992669)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.045--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.045--ServerSession(1015543859)--Connection(1055829714)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.045--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.046--ServerSession(1015543859)--Connection(1672534268)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.046--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.046--ServerSession(1015543859)--Connection(360309364)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.046--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--Connection(1607292790)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--Connection(796207043)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--Connection(1106561889)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.047--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.048--ServerSession(1015543859)--Connection(443044223)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.048--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.048--ServerSession(1015543859)--Connection(1974246249)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.048--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--Connection(1447534419)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--Connection(2026535117)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--Connection(1649576797)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.049--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.05--ServerSession(1015543859)--Connection(863183707)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.05--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.05--ServerSession(1015543859)--Connection(1354680828)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.05--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.05--ServerSession(1015543859)--Connection(1818241001)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--Connection(1987830810)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--Connection(884591658)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.051--ServerSession(1015543859)--Connection(1456107018)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.052--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.052--ServerSession(1015543859)--Connection(256944579)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.052--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.052--ServerSession(1015543859)--Connection(1892362329)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.052--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--Connection(546468367)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--Connection(478086064)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--Connection(766250475)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.053--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.054--ServerSession(1015543859)--Connection(1677556352)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.054--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.054--ServerSession(1015543859)--Connection(1929917247)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.054--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--Connection(438197067)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--Connection(427459803)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--Connection(567637171)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.055--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.056--ServerSession(1015543859)--Connection(2055820606)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.056--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.056--ServerSession(1015543859)--Connection(811033995)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.056--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--Connection(361331333)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--Connection(276321009)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--Connection(928891115)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.057--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--Connection(1735088744)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--Connection(512908078)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--Connection(454977832)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.058--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.059--ServerSession(1015543859)--Connection(1120189978)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.059--ServerSession(1015543859)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.059--ServerSession(1015543859)--Connection(1285415141)--CREATE TABLE RACE_CAR (ID INTEGER NOT NULL, CARCLASS VARCHAR(255) NOT NULL, MAKER VARCHAR(255) NOT NULL, MODEL VARCHAR(255) NOT NULL, OWNER_USER_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.06--ServerSession(1015543859)--Connection(1405183692)--CREATE TABLE CHAMPIONSHIP (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.06--ServerSession(1015543859)--Connection(1808343838)--CREATE TABLE RACE_CIRCUIT (ID INTEGER NOT NULL, LOCATION VARCHAR(255) NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.061--ServerSession(1015543859)--Connection(783157167)--CREATE TABLE joinrequest (ID INTEGER NOT NULL, DATETIMECREATED TIMESTAMP NOT NULL, DATETIMERESOLVED TIMESTAMP, MESSAGE VARCHAR(255), STATUS VARCHAR(255), USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.062--ServerSession(1015543859)--Connection(1457170787)--CREATE TABLE RACE (RACE_ID INTEGER NOT NULL, EOR_DATE date, MAXDRIVERS INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL, RACE_DATE date, CIRCUIT_ID INTEGER, ORGANIZOR_USER_ID INTEGER, championship_id INTEGER, PRIMARY KEY (RACE_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.063--ServerSession(1015543859)--Connection(2081527003)--CREATE TABLE RESULT (FINISHPOS INTEGER, STARTPOS INTEGER, driver_id INTEGER NOT NULL, race_id INTEGER NOT NULL, car_id INTEGER, PRIMARY KEY (driver_id, race_id))
+[EL Fine]: sql: 2022-05-16 13:44:31.063--ServerSession(1015543859)--Connection(2016448708)--CREATE TABLE RACE_TEAM (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, owner INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.064--ServerSession(1015543859)--Connection(1225561793)--CREATE TABLE membership (MEMBERSHIPSTATE VARCHAR(255), ROLE VARCHAR(255), TEAM_ID INTEGER NOT NULL, USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (TEAM_ID, USER_USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.065--ServerSession(1015543859)--Connection(1042007171)--CREATE TABLE APP_USER (USER_ID INTEGER NOT NULL, AGE INTEGER NOT NULL, EMAIL VARCHAR(255) NOT NULL, FIRSTNAME VARCHAR(255) NOT NULL, LASTNAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, ROLE VARCHAR(255), USERNAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.066--ServerSession(1015543859)--Connection(269516680)--CREATE TABLE race_classes (Race_RACE_ID INTEGER, classes VARCHAR(255) NOT NULL)
+[EL Fine]: sql: 2022-05-16 13:44:31.066--ServerSession(1015543859)--Connection(748078288)--CREATE TABLE RACE_TEAM_joinrequest (Team_ID INTEGER NOT NULL, joinRequests_ID INTEGER NOT NULL, PRIMARY KEY (Team_ID, joinRequests_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.067--ServerSession(1015543859)--Connection(1249154695)--ALTER TABLE RACE_CAR ADD CONSTRAINT FK_RACE_CAR_OWNER_USER_ID FOREIGN KEY (OWNER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.068--ServerSession(1015543859)--Connection(1888221386)--ALTER TABLE joinrequest ADD CONSTRAINT FK_joinrequest_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.069--ServerSession(1015543859)--Connection(602081724)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_CIRCUIT_ID FOREIGN KEY (CIRCUIT_ID) REFERENCES RACE_CIRCUIT (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.069--ServerSession(1015543859)--Connection(320449846)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_championship_id FOREIGN KEY (championship_id) REFERENCES CHAMPIONSHIP (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.07--ServerSession(1015543859)--Connection(498260137)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_ORGANIZOR_USER_ID FOREIGN KEY (ORGANIZOR_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.071--ServerSession(1015543859)--Connection(2032911342)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_car_id FOREIGN KEY (car_id) REFERENCES RACE_CAR (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.072--ServerSession(1015543859)--Connection(619097308)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_driver_id FOREIGN KEY (driver_id) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.073--ServerSession(1015543859)--Connection(2091545592)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_race_id FOREIGN KEY (race_id) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.074--ServerSession(1015543859)--Connection(1001907333)--ALTER TABLE RACE_TEAM ADD CONSTRAINT FK_RACE_TEAM_owner FOREIGN KEY (owner) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.075--ServerSession(1015543859)--Connection(69288059)--ALTER TABLE membership ADD CONSTRAINT FK_membership_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.076--ServerSession(1015543859)--Connection(1398332319)--ALTER TABLE membership ADD CONSTRAINT FK_membership_TEAM_ID FOREIGN KEY (TEAM_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.077--ServerSession(1015543859)--Connection(1596016510)--ALTER TABLE race_classes ADD CONSTRAINT FK_race_classes_Race_RACE_ID FOREIGN KEY (Race_RACE_ID) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.078--ServerSession(1015543859)--Connection(559756684)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID FOREIGN KEY (joinRequests_ID) REFERENCES joinrequest (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.079--ServerSession(1015543859)--Connection(421106990)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID FOREIGN KEY (Team_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.08--ServerSession(1015543859)--Connection(2784778)--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: sql: 2022-05-16 13:44:31.081--ServerSession(1015543859)--Connection(625411448)--DELETE FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.081--ServerSession(1015543859)--Connection(1143725929)--SELECT * FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.082--ServerSession(1015543859)--Connection(436852846)--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+[EL Fine]: sql: 2022-05-16 13:44:31.085--ClientSession(919818795)--Connection(2117829242)--SELECT USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME FROM APP_USER WHERE (USERNAME = ?)
+	bind => [admin]
+16-05-2022 13:44:31.085 [main] INFO  c.c.k.e.r.s.SystemInitializer - Generated admin user with credentials admin/adm1n
+[EL Fine]: sql: 2022-05-16 13:44:31.138--ClientSession(919818795)--Connection(2117829242)--UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind => [50, SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:31.139--ClientSession(919818795)--Connection(2117829242)--SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind => [SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:31.139--ClientSession(919818795)--Connection(2117829242)--INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1, 0, none, System, Administrator, $2a$10$V3Q95iS3TdwWznDZrHnN4u9soudJMOtFtZEe1fj47L6RX1VkAg24O, ADMIN, admin]
+16-05-2022 13:44:31.161 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/'], []
+16-05-2022 13:44:31.161 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login'], []
+16-05-2022 13:44:31.189 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+16-05-2022 13:44:31.190 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16-05-2022 13:44:31.191 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16-05-2022 13:44:31.197 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean named 'mvcHandlerMappingIntrospector' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'mvcHandlerMappingIntrospector' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+16-05-2022 13:44:31.215 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - Starting UserDaoTest on DESKTOP-OI8RF7B with PID 18652 (started by prada in E:\School\Bcc\bakalarka\appka\pradaluk)
+16-05-2022 13:44:31.215 [main] DEBUG c.c.k.ear.race.dao.UserDaoTest - Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+16-05-2022 13:44:31.215 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - No active profile set, falling back to default profiles: default
+16-05-2022 13:44:31.285 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-05-2022 13:44:31.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+16-05-2022 13:44:31.295 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16-05-2022 13:44:31.305 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:110a8f4f-0823-4604-8a06-0d70d5404a73;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16-05-2022 13:44:31.359 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[EL Info]: 2022-05-16 13:44:31.436--ServerSession(1405755905)--EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[EL Fine]: sql: 2022-05-16 13:44:31.444--ServerSession(1405755905)--Connection(436595683)--ALTER TABLE RACE_CAR DROP CONSTRAINT FK_RACE_CAR_OWNER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.444--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.445--ServerSession(1405755905)--Connection(1565666643)--ALTER TABLE joinrequest DROP CONSTRAINT FK_joinrequest_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.445--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.445--ServerSession(1405755905)--Connection(269960063)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_CIRCUIT_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.445--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--Connection(273791087)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_championship_id
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--Connection(250652885)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_ORGANIZOR_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--Connection(2104656938)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_car_id
+[EL Fine]: sql: 2022-05-16 13:44:31.446--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--Connection(813630278)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_driver_id
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--Connection(1177134883)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_race_id
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--Connection(1362065408)--ALTER TABLE RACE_TEAM DROP CONSTRAINT FK_RACE_TEAM_owner
+[EL Fine]: sql: 2022-05-16 13:44:31.447--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--Connection(76887131)--ALTER TABLE membership DROP CONSTRAINT FK_membership_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--Connection(176216723)--ALTER TABLE membership DROP CONSTRAINT FK_membership_TEAM_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--Connection(1973846679)--ALTER TABLE race_classes DROP CONSTRAINT FK_race_classes_Race_RACE_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.448--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.449--ServerSession(1405755905)--Connection(1704414028)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.449--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.449--ServerSession(1405755905)--Connection(574355826)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.449--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.449--ServerSession(1405755905)--Connection(1360663522)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.45--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.45--ServerSession(1405755905)--Connection(1222304013)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.45--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.45--ServerSession(1405755905)--Connection(1333060889)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.45--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--Connection(1256666192)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--Connection(130850920)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--Connection(340625531)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.451--ServerSession(1405755905)--Connection(453399155)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--Connection(2039443977)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--Connection(1722724135)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.452--ServerSession(1405755905)--Connection(1427068633)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--Connection(2064747923)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--Connection(1081238725)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.453--ServerSession(1405755905)--Connection(907196858)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--Connection(292088065)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--Connection(687284050)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--Connection(581129294)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.454--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--Connection(2014521945)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--Connection(1469829005)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--Connection(337924960)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.455--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--Connection(1343736153)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--Connection(152082347)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--Connection(1734464266)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.456--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.457--ServerSession(1405755905)--Connection(1770482014)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.457--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.457--ServerSession(1405755905)--Connection(483474087)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.457--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.457--ServerSession(1405755905)--Connection(2041764260)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.458--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.458--ServerSession(1405755905)--Connection(385476755)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.458--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.458--ServerSession(1405755905)--Connection(606501249)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.458--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--Connection(164432006)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--Connection(1936997405)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--Connection(344084204)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.459--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.46--ServerSession(1405755905)--Connection(444045287)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.46--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.46--ServerSession(1405755905)--Connection(1303263564)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.46--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--Connection(896351718)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--Connection(1021912893)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--Connection(754304724)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.461--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.462--ServerSession(1405755905)--Connection(1334677817)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.462--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.462--ServerSession(1405755905)--Connection(286014352)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.462--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.462--ServerSession(1405755905)--Connection(944460565)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--Connection(989107093)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--Connection(313189197)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.463--ServerSession(1405755905)--Connection(27759866)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--Connection(1022499703)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--Connection(1788692709)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--Connection(1237463271)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.464--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--Connection(92900199)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--Connection(1145232723)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--Connection(2054484813)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.465--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.466--ServerSession(1405755905)--Connection(571365828)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.466--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.466--ServerSession(1405755905)--Connection(1988865066)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.466--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.466--ServerSession(1405755905)--Connection(199896360)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.467--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.467--ServerSession(1405755905)--Connection(2093473343)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.467--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.467--ServerSession(1405755905)--Connection(659771908)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.467--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.468--ServerSession(1405755905)--Connection(707086506)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.468--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.468--ServerSession(1405755905)--Connection(1981765778)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.468--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.468--ServerSession(1405755905)--Connection(1383293795)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.469--ServerSession(1405755905)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.469--ServerSession(1405755905)--Connection(784904889)--CREATE TABLE RACE_CAR (ID INTEGER NOT NULL, CARCLASS VARCHAR(255) NOT NULL, MAKER VARCHAR(255) NOT NULL, MODEL VARCHAR(255) NOT NULL, OWNER_USER_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.469--ServerSession(1405755905)--Connection(1442064869)--CREATE TABLE CHAMPIONSHIP (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.47--ServerSession(1405755905)--Connection(305018981)--CREATE TABLE RACE_CIRCUIT (ID INTEGER NOT NULL, LOCATION VARCHAR(255) NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.471--ServerSession(1405755905)--Connection(1239462480)--CREATE TABLE joinrequest (ID INTEGER NOT NULL, DATETIMECREATED TIMESTAMP NOT NULL, DATETIMERESOLVED TIMESTAMP, MESSAGE VARCHAR(255), STATUS VARCHAR(255), USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.471--ServerSession(1405755905)--Connection(1102662118)--CREATE TABLE RACE (RACE_ID INTEGER NOT NULL, EOR_DATE date, MAXDRIVERS INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL, RACE_DATE date, CIRCUIT_ID INTEGER, ORGANIZOR_USER_ID INTEGER, championship_id INTEGER, PRIMARY KEY (RACE_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.472--ServerSession(1405755905)--Connection(161455104)--CREATE TABLE RESULT (FINISHPOS INTEGER, STARTPOS INTEGER, driver_id INTEGER NOT NULL, race_id INTEGER NOT NULL, car_id INTEGER, PRIMARY KEY (driver_id, race_id))
+[EL Fine]: sql: 2022-05-16 13:44:31.473--ServerSession(1405755905)--Connection(1753735765)--CREATE TABLE RACE_TEAM (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, owner INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.473--ServerSession(1405755905)--Connection(1424001472)--CREATE TABLE membership (MEMBERSHIPSTATE VARCHAR(255), ROLE VARCHAR(255), TEAM_ID INTEGER NOT NULL, USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (TEAM_ID, USER_USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.474--ServerSession(1405755905)--Connection(969861729)--CREATE TABLE APP_USER (USER_ID INTEGER NOT NULL, AGE INTEGER NOT NULL, EMAIL VARCHAR(255) NOT NULL, FIRSTNAME VARCHAR(255) NOT NULL, LASTNAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, ROLE VARCHAR(255), USERNAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.475--ServerSession(1405755905)--Connection(1775618597)--CREATE TABLE race_classes (Race_RACE_ID INTEGER, classes VARCHAR(255) NOT NULL)
+[EL Fine]: sql: 2022-05-16 13:44:31.475--ServerSession(1405755905)--Connection(1049050189)--CREATE TABLE RACE_TEAM_joinrequest (Team_ID INTEGER NOT NULL, joinRequests_ID INTEGER NOT NULL, PRIMARY KEY (Team_ID, joinRequests_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.476--ServerSession(1405755905)--Connection(1802259357)--ALTER TABLE RACE_CAR ADD CONSTRAINT FK_RACE_CAR_OWNER_USER_ID FOREIGN KEY (OWNER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.477--ServerSession(1405755905)--Connection(2128869022)--ALTER TABLE joinrequest ADD CONSTRAINT FK_joinrequest_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.478--ServerSession(1405755905)--Connection(19620049)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_CIRCUIT_ID FOREIGN KEY (CIRCUIT_ID) REFERENCES RACE_CIRCUIT (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.479--ServerSession(1405755905)--Connection(198795820)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_championship_id FOREIGN KEY (championship_id) REFERENCES CHAMPIONSHIP (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.48--ServerSession(1405755905)--Connection(431248015)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_ORGANIZOR_USER_ID FOREIGN KEY (ORGANIZOR_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.481--ServerSession(1405755905)--Connection(708343061)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_car_id FOREIGN KEY (car_id) REFERENCES RACE_CAR (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.482--ServerSession(1405755905)--Connection(2138073339)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_driver_id FOREIGN KEY (driver_id) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.483--ServerSession(1405755905)--Connection(1166781379)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_race_id FOREIGN KEY (race_id) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.483--ServerSession(1405755905)--Connection(1113776809)--ALTER TABLE RACE_TEAM ADD CONSTRAINT FK_RACE_TEAM_owner FOREIGN KEY (owner) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.484--ServerSession(1405755905)--Connection(27650203)--ALTER TABLE membership ADD CONSTRAINT FK_membership_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.485--ServerSession(1405755905)--Connection(538856055)--ALTER TABLE membership ADD CONSTRAINT FK_membership_TEAM_ID FOREIGN KEY (TEAM_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.486--ServerSession(1405755905)--Connection(1138244411)--ALTER TABLE race_classes ADD CONSTRAINT FK_race_classes_Race_RACE_ID FOREIGN KEY (Race_RACE_ID) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.487--ServerSession(1405755905)--Connection(1202150613)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID FOREIGN KEY (joinRequests_ID) REFERENCES joinrequest (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.488--ServerSession(1405755905)--Connection(766869522)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID FOREIGN KEY (Team_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.489--ServerSession(1405755905)--Connection(1730598590)--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: sql: 2022-05-16 13:44:31.489--ServerSession(1405755905)--Connection(1953255213)--DELETE FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.49--ServerSession(1405755905)--Connection(1142830363)--SELECT * FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.49--ServerSession(1405755905)--Connection(266722574)--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+[EL Fine]: sql: 2022-05-16 13:44:31.493--ClientSession(1210102924)--Connection(1794768081)--SELECT USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME FROM APP_USER WHERE (USERNAME = ?)
+	bind => [admin]
+16-05-2022 13:44:31.493 [main] INFO  c.c.k.e.r.s.SystemInitializer - Generated admin user with credentials admin/adm1n
+[EL Fine]: sql: 2022-05-16 13:44:31.547--ClientSession(1210102924)--Connection(1794768081)--UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind => [50, SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:31.547--ClientSession(1210102924)--Connection(1794768081)--SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind => [SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:31.548--ClientSession(1210102924)--Connection(1794768081)--INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1, 0, none, System, Administrator, $2a$10$VWtwzn2SBQ3CQa.s1ItauuNBHC3Nbf33.UkhTQra/gnWNEGmFOy6q, ADMIN, admin]
+16-05-2022 13:44:31.565 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/'], []
+16-05-2022 13:44:31.566 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login'], []
+16-05-2022 13:44:31.594 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+16-05-2022 13:44:31.595 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16-05-2022 13:44:31.596 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16-05-2022 13:44:31.601 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean named 'mvcHandlerMappingIntrospector' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'mvcHandlerMappingIntrospector' in your configuration.
+
+16-05-2022 13:44:31.602 [main] ERROR o.s.t.c.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5432dca2] to prepare test instance [cz.cvut.kbss.ear.race.dao.UserDaoTest@67efb873]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:43)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:82)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:73)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer$MvcCorsFilter.getMvcCorsFilter(CorsConfigurer.java:113)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer$MvcCorsFilter.access$000(CorsConfigurer.java:103)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.getCorsFilter(CorsConfigurer.java:97)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.configure(CorsConfigurer.java:66)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.configure(CorsConfigurer.java:39)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:383)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:329)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:294)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:81)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:333)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 69 common frames omitted
+]]></system-out>
+  </testcase>
+  <testcase name="findByUsernameReturnsNullForUnknownUsername" classname="cz.cvut.kbss.ear.race.dao.UserDaoTest" time="0">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+]]></error>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+16-05-2022 13:44:31.621 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - Starting UserDaoTest on DESKTOP-OI8RF7B with PID 18652 (started by prada in E:\School\Bcc\bakalarka\appka\pradaluk)
+16-05-2022 13:44:31.622 [main] DEBUG c.c.k.ear.race.dao.UserDaoTest - Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+16-05-2022 13:44:31.622 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - No active profile set, falling back to default profiles: default
+16-05-2022 13:44:31.682 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-05-2022 13:44:31.684 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+16-05-2022 13:44:31.691 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16-05-2022 13:44:31.704 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:33141eca-f233-4651-a4a2-6400c7330127;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16-05-2022 13:44:31.758 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[EL Info]: 2022-05-16 13:44:31.845--ServerSession(296578851)--EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--Connection(1948633508)--ALTER TABLE RACE_CAR DROP CONSTRAINT FK_RACE_CAR_OWNER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--Connection(1122042777)--ALTER TABLE joinrequest DROP CONSTRAINT FK_joinrequest_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--Connection(1824499276)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_CIRCUIT_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.853--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--Connection(2093178592)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_championship_id
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--Connection(1930299504)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_ORGANIZOR_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--Connection(1190042623)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_car_id
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--Connection(1010977736)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_driver_id
+[EL Fine]: sql: 2022-05-16 13:44:31.854--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--Connection(19512420)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_race_id
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--Connection(1678624737)--ALTER TABLE RACE_TEAM DROP CONSTRAINT FK_RACE_TEAM_owner
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--Connection(542408907)--ALTER TABLE membership DROP CONSTRAINT FK_membership_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.855--ServerSession(296578851)--Connection(1942565500)--ALTER TABLE membership DROP CONSTRAINT FK_membership_TEAM_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--Connection(438124508)--ALTER TABLE race_classes DROP CONSTRAINT FK_race_classes_Race_RACE_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--Connection(1013709740)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--Connection(1813336410)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--Connection(1297892553)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.856--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--Connection(1140755024)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--Connection(2118543548)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--Connection(553139656)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--Connection(600579041)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.857--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--Connection(2117430587)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--Connection(764703570)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--Connection(2107112262)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.858--ServerSession(296578851)--Connection(2055055501)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--Connection(952101457)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--Connection(1403054064)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--Connection(811111605)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.859--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--Connection(1886377435)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--Connection(24421366)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--Connection(462817361)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--Connection(231818377)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.86--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--Connection(1208540181)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--Connection(665028383)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--Connection(1116826255)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.861--ServerSession(296578851)--Connection(1657944512)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--Connection(1777068603)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--Connection(1685515002)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--Connection(513325194)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.862--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--Connection(211312721)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--Connection(316689102)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--Connection(1972053398)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.863--ServerSession(296578851)--Connection(321265782)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.864--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.864--ServerSession(296578851)--Connection(1335540756)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.864--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.864--ServerSession(296578851)--Connection(1007659540)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.864--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--Connection(618010732)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--Connection(614462720)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--Connection(815114048)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.865--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--Connection(1211995226)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--Connection(1738114653)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--Connection(1120757521)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.866--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--Connection(457732328)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--Connection(282209799)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--Connection(459160469)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.867--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--Connection(2104165929)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--Connection(472812309)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--Connection(743420481)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.868--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--Connection(152150454)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--Connection(1910885637)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--Connection(1344933268)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.869--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--Connection(971323523)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--Connection(864629646)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--Connection(341639529)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.87--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--Connection(1250856618)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--Connection(316823226)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--Connection(1761804810)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.871--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--Connection(2056211233)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--Connection(2124285203)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--Connection(1877656352)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.872--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.873--ServerSession(296578851)--Connection(987434632)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.873--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.873--ServerSession(296578851)--Connection(1147770600)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:31.873--ServerSession(296578851)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:31.873--ServerSession(296578851)--Connection(612515648)--CREATE TABLE RACE_CAR (ID INTEGER NOT NULL, CARCLASS VARCHAR(255) NOT NULL, MAKER VARCHAR(255) NOT NULL, MODEL VARCHAR(255) NOT NULL, OWNER_USER_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.874--ServerSession(296578851)--Connection(901072389)--CREATE TABLE CHAMPIONSHIP (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.875--ServerSession(296578851)--Connection(1687870305)--CREATE TABLE RACE_CIRCUIT (ID INTEGER NOT NULL, LOCATION VARCHAR(255) NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.875--ServerSession(296578851)--Connection(1186873251)--CREATE TABLE joinrequest (ID INTEGER NOT NULL, DATETIMECREATED TIMESTAMP NOT NULL, DATETIMERESOLVED TIMESTAMP, MESSAGE VARCHAR(255), STATUS VARCHAR(255), USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.876--ServerSession(296578851)--Connection(97303720)--CREATE TABLE RACE (RACE_ID INTEGER NOT NULL, EOR_DATE date, MAXDRIVERS INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL, RACE_DATE date, CIRCUIT_ID INTEGER, ORGANIZOR_USER_ID INTEGER, championship_id INTEGER, PRIMARY KEY (RACE_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.876--ServerSession(296578851)--Connection(945495136)--CREATE TABLE RESULT (FINISHPOS INTEGER, STARTPOS INTEGER, driver_id INTEGER NOT NULL, race_id INTEGER NOT NULL, car_id INTEGER, PRIMARY KEY (driver_id, race_id))
+[EL Fine]: sql: 2022-05-16 13:44:31.877--ServerSession(296578851)--Connection(380037866)--CREATE TABLE RACE_TEAM (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, owner INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.877--ServerSession(296578851)--Connection(1123896671)--CREATE TABLE membership (MEMBERSHIPSTATE VARCHAR(255), ROLE VARCHAR(255), TEAM_ID INTEGER NOT NULL, USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (TEAM_ID, USER_USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.878--ServerSession(296578851)--Connection(1199179502)--CREATE TABLE APP_USER (USER_ID INTEGER NOT NULL, AGE INTEGER NOT NULL, EMAIL VARCHAR(255) NOT NULL, FIRSTNAME VARCHAR(255) NOT NULL, LASTNAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, ROLE VARCHAR(255), USERNAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.879--ServerSession(296578851)--Connection(704168574)--CREATE TABLE race_classes (Race_RACE_ID INTEGER, classes VARCHAR(255) NOT NULL)
+[EL Fine]: sql: 2022-05-16 13:44:31.879--ServerSession(296578851)--Connection(389955023)--CREATE TABLE RACE_TEAM_joinrequest (Team_ID INTEGER NOT NULL, joinRequests_ID INTEGER NOT NULL, PRIMARY KEY (Team_ID, joinRequests_ID))
+[EL Fine]: sql: 2022-05-16 13:44:31.879--ServerSession(296578851)--Connection(414454795)--ALTER TABLE RACE_CAR ADD CONSTRAINT FK_RACE_CAR_OWNER_USER_ID FOREIGN KEY (OWNER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.88--ServerSession(296578851)--Connection(945203766)--ALTER TABLE joinrequest ADD CONSTRAINT FK_joinrequest_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.96--ServerSession(296578851)--Connection(499289478)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_CIRCUIT_ID FOREIGN KEY (CIRCUIT_ID) REFERENCES RACE_CIRCUIT (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.961--ServerSession(296578851)--Connection(458898684)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_championship_id FOREIGN KEY (championship_id) REFERENCES CHAMPIONSHIP (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.962--ServerSession(296578851)--Connection(1919534197)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_ORGANIZOR_USER_ID FOREIGN KEY (ORGANIZOR_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.963--ServerSession(296578851)--Connection(1247972251)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_car_id FOREIGN KEY (car_id) REFERENCES RACE_CAR (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.963--ServerSession(296578851)--Connection(386501335)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_driver_id FOREIGN KEY (driver_id) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.964--ServerSession(296578851)--Connection(1567310488)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_race_id FOREIGN KEY (race_id) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.965--ServerSession(296578851)--Connection(1512827768)--ALTER TABLE RACE_TEAM ADD CONSTRAINT FK_RACE_TEAM_owner FOREIGN KEY (owner) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.966--ServerSession(296578851)--Connection(1502525572)--ALTER TABLE membership ADD CONSTRAINT FK_membership_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.966--ServerSession(296578851)--Connection(338917009)--ALTER TABLE membership ADD CONSTRAINT FK_membership_TEAM_ID FOREIGN KEY (TEAM_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.967--ServerSession(296578851)--Connection(87232797)--ALTER TABLE race_classes ADD CONSTRAINT FK_race_classes_Race_RACE_ID FOREIGN KEY (Race_RACE_ID) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.968--ServerSession(296578851)--Connection(1919229837)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID FOREIGN KEY (joinRequests_ID) REFERENCES joinrequest (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.969--ServerSession(296578851)--Connection(2130142904)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID FOREIGN KEY (Team_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:31.97--ServerSession(296578851)--Connection(1575352442)--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: sql: 2022-05-16 13:44:31.971--ServerSession(296578851)--Connection(1441951221)--DELETE FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.972--ServerSession(296578851)--Connection(760843448)--SELECT * FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:31.972--ServerSession(296578851)--Connection(758110036)--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+[EL Fine]: sql: 2022-05-16 13:44:31.976--ClientSession(1372439524)--Connection(74632438)--SELECT USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME FROM APP_USER WHERE (USERNAME = ?)
+	bind => [admin]
+16-05-2022 13:44:31.976 [main] INFO  c.c.k.e.r.s.SystemInitializer - Generated admin user with credentials admin/adm1n
+[EL Fine]: sql: 2022-05-16 13:44:32.029--ClientSession(1372439524)--Connection(74632438)--UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind => [50, SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:32.03--ClientSession(1372439524)--Connection(74632438)--SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind => [SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:32.03--ClientSession(1372439524)--Connection(74632438)--INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1, 0, none, System, Administrator, $2a$10$B8CUA5EOk/0/cO7.XrVdNOEpp.x39fQtWFRrGDcWYY4ACCDNpK/bO, ADMIN, admin]
+16-05-2022 13:44:32.048 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/'], []
+16-05-2022 13:44:32.048 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login'], []
+16-05-2022 13:44:32.076 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+16-05-2022 13:44:32.076 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16-05-2022 13:44:32.077 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16-05-2022 13:44:32.081 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean named 'mvcHandlerMappingIntrospector' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'mvcHandlerMappingIntrospector' in your configuration.
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+16-05-2022 13:44:32.093 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - Starting UserDaoTest on DESKTOP-OI8RF7B with PID 18652 (started by prada in E:\School\Bcc\bakalarka\appka\pradaluk)
+16-05-2022 13:44:32.093 [main] DEBUG c.c.k.ear.race.dao.UserDaoTest - Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+16-05-2022 13:44:32.094 [main] INFO  c.c.k.ear.race.dao.UserDaoTest - No active profile set, falling back to default profiles: default
+16-05-2022 13:44:32.144 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-05-2022 13:44:32.145 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+16-05-2022 13:44:32.151 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16-05-2022 13:44:32.161 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:60224e25-a1d0-466c-ac0b-911d597399f4;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16-05-2022 13:44:32.211 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[EL Info]: 2022-05-16 13:44:32.285--ServerSession(225686866)--EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--Connection(170537532)--ALTER TABLE RACE_CAR DROP CONSTRAINT FK_RACE_CAR_OWNER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--Connection(684728973)--ALTER TABLE joinrequest DROP CONSTRAINT FK_joinrequest_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--Connection(1327073989)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_CIRCUIT_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.292--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--Connection(1969653479)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_championship_id
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--Connection(297158535)--ALTER TABLE RACE DROP CONSTRAINT FK_RACE_ORGANIZOR_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--Connection(2060479077)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_car_id
+[EL Fine]: sql: 2022-05-16 13:44:32.293--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--Connection(1286291372)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_driver_id
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--Connection(1946519798)--ALTER TABLE RESULT DROP CONSTRAINT FK_RESULT_race_id
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--Connection(652547571)--ALTER TABLE RACE_TEAM DROP CONSTRAINT FK_RACE_TEAM_owner
+[EL Fine]: sql: 2022-05-16 13:44:32.294--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--Connection(1536710935)--ALTER TABLE membership DROP CONSTRAINT FK_membership_USER_USER_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--Connection(2081265449)--ALTER TABLE membership DROP CONSTRAINT FK_membership_TEAM_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--Connection(1250378446)--ALTER TABLE race_classes DROP CONSTRAINT FK_race_classes_Race_RACE_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--Connection(1108449043)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.295--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--Connection(542002374)--ALTER TABLE RACE_TEAM_joinrequest DROP CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--Connection(924962583)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--Connection(1612280422)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.296--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--Connection(167728239)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--Connection(1481706845)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--Connection(1753090763)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.297--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--Connection(1926624629)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--Connection(115438768)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--Connection(244311466)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.298--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--Connection(860868188)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--Connection(51823900)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--Connection(1294813447)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--Connection(1465099724)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.299--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--Connection(2144206391)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--Connection(2092689884)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--Connection(576312914)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--Connection(2095079060)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.3--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--Connection(1911690713)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--Connection(2051050659)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--Connection(1953359493)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.301--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--Connection(582069873)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--Connection(48182318)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--Connection(800753628)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--Connection(912387023)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.302--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--Connection(900041142)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--Connection(64624354)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--Connection(374739045)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--Connection(939043504)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--Connection(1858436230)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.303--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--Connection(1050024111)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--Connection(1992161498)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--Connection(215486778)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--Connection(11758286)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.304--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--Connection(841844470)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--Connection(1365022088)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--Connection(343996043)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--Connection(1154241066)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.305--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--Connection(1346519970)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--Connection(2027262208)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--Connection(52323077)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.306--ServerSession(225686866)--Connection(1977647498)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--Connection(1941903212)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--Connection(2141697419)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--Connection(1931486047)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--Connection(992426964)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.307--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--Connection(1935768177)--DROP TABLE RACE_CAR CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--Connection(1845729126)--DROP TABLE CHAMPIONSHIP CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--Connection(720335307)--DROP TABLE RACE_CIRCUIT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--Connection(816078086)--DROP TABLE joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.308--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--Connection(973159083)--DROP TABLE RACE CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--Connection(1044385055)--DROP TABLE RESULT CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--Connection(479713830)--DROP TABLE RACE_TEAM CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--Connection(794214046)--DROP TABLE membership CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--Connection(87364340)--DROP TABLE APP_USER CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.309--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.31--ServerSession(225686866)--Connection(2144629386)--DROP TABLE race_classes CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.31--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.31--ServerSession(225686866)--Connection(1570408082)--DROP TABLE RACE_TEAM_joinrequest CASCADE
+[EL Fine]: sql: 2022-05-16 13:44:32.31--ServerSession(225686866)--SELECT 1
+[EL Fine]: sql: 2022-05-16 13:44:32.31--ServerSession(225686866)--Connection(970898220)--CREATE TABLE RACE_CAR (ID INTEGER NOT NULL, CARCLASS VARCHAR(255) NOT NULL, MAKER VARCHAR(255) NOT NULL, MODEL VARCHAR(255) NOT NULL, OWNER_USER_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.311--ServerSession(225686866)--Connection(1651433654)--CREATE TABLE CHAMPIONSHIP (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.312--ServerSession(225686866)--Connection(2128669034)--CREATE TABLE RACE_CIRCUIT (ID INTEGER NOT NULL, LOCATION VARCHAR(255) NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.312--ServerSession(225686866)--Connection(1028346467)--CREATE TABLE joinrequest (ID INTEGER NOT NULL, DATETIMECREATED TIMESTAMP NOT NULL, DATETIMERESOLVED TIMESTAMP, MESSAGE VARCHAR(255), STATUS VARCHAR(255), USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.313--ServerSession(225686866)--Connection(1424635675)--CREATE TABLE RACE (RACE_ID INTEGER NOT NULL, EOR_DATE date, MAXDRIVERS INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL, RACE_DATE date, CIRCUIT_ID INTEGER, ORGANIZOR_USER_ID INTEGER, championship_id INTEGER, PRIMARY KEY (RACE_ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.313--ServerSession(225686866)--Connection(1734613557)--CREATE TABLE RESULT (FINISHPOS INTEGER, STARTPOS INTEGER, driver_id INTEGER NOT NULL, race_id INTEGER NOT NULL, car_id INTEGER, PRIMARY KEY (driver_id, race_id))
+[EL Fine]: sql: 2022-05-16 13:44:32.314--ServerSession(225686866)--Connection(363595983)--CREATE TABLE RACE_TEAM (ID INTEGER NOT NULL, NAME VARCHAR(255) NOT NULL UNIQUE, owner INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.314--ServerSession(225686866)--Connection(2145169074)--CREATE TABLE membership (MEMBERSHIPSTATE VARCHAR(255), ROLE VARCHAR(255), TEAM_ID INTEGER NOT NULL, USER_USER_ID INTEGER NOT NULL, PRIMARY KEY (TEAM_ID, USER_USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.315--ServerSession(225686866)--Connection(1486466202)--CREATE TABLE APP_USER (USER_ID INTEGER NOT NULL, AGE INTEGER NOT NULL, EMAIL VARCHAR(255) NOT NULL, FIRSTNAME VARCHAR(255) NOT NULL, LASTNAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, ROLE VARCHAR(255), USERNAME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (USER_ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.315--ServerSession(225686866)--Connection(2049695473)--CREATE TABLE race_classes (Race_RACE_ID INTEGER, classes VARCHAR(255) NOT NULL)
+[EL Fine]: sql: 2022-05-16 13:44:32.316--ServerSession(225686866)--Connection(5958610)--CREATE TABLE RACE_TEAM_joinrequest (Team_ID INTEGER NOT NULL, joinRequests_ID INTEGER NOT NULL, PRIMARY KEY (Team_ID, joinRequests_ID))
+[EL Fine]: sql: 2022-05-16 13:44:32.316--ServerSession(225686866)--Connection(2059021882)--ALTER TABLE RACE_CAR ADD CONSTRAINT FK_RACE_CAR_OWNER_USER_ID FOREIGN KEY (OWNER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.317--ServerSession(225686866)--Connection(2015387908)--ALTER TABLE joinrequest ADD CONSTRAINT FK_joinrequest_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.318--ServerSession(225686866)--Connection(301342420)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_CIRCUIT_ID FOREIGN KEY (CIRCUIT_ID) REFERENCES RACE_CIRCUIT (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.318--ServerSession(225686866)--Connection(1243816495)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_championship_id FOREIGN KEY (championship_id) REFERENCES CHAMPIONSHIP (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.319--ServerSession(225686866)--Connection(1101047283)--ALTER TABLE RACE ADD CONSTRAINT FK_RACE_ORGANIZOR_USER_ID FOREIGN KEY (ORGANIZOR_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.319--ServerSession(225686866)--Connection(532929922)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_car_id FOREIGN KEY (car_id) REFERENCES RACE_CAR (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.32--ServerSession(225686866)--Connection(228921851)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_driver_id FOREIGN KEY (driver_id) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.32--ServerSession(225686866)--Connection(301107082)--ALTER TABLE RESULT ADD CONSTRAINT FK_RESULT_race_id FOREIGN KEY (race_id) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.321--ServerSession(225686866)--Connection(20604670)--ALTER TABLE RACE_TEAM ADD CONSTRAINT FK_RACE_TEAM_owner FOREIGN KEY (owner) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.322--ServerSession(225686866)--Connection(349360156)--ALTER TABLE membership ADD CONSTRAINT FK_membership_USER_USER_ID FOREIGN KEY (USER_USER_ID) REFERENCES APP_USER (USER_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.322--ServerSession(225686866)--Connection(755682095)--ALTER TABLE membership ADD CONSTRAINT FK_membership_TEAM_ID FOREIGN KEY (TEAM_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.323--ServerSession(225686866)--Connection(907108671)--ALTER TABLE race_classes ADD CONSTRAINT FK_race_classes_Race_RACE_ID FOREIGN KEY (Race_RACE_ID) REFERENCES RACE (RACE_ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.324--ServerSession(225686866)--Connection(385714587)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_joinRequests_ID FOREIGN KEY (joinRequests_ID) REFERENCES joinrequest (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.324--ServerSession(225686866)--Connection(2040191161)--ALTER TABLE RACE_TEAM_joinrequest ADD CONSTRAINT FK_RACE_TEAM_joinrequest_Team_ID FOREIGN KEY (Team_ID) REFERENCES RACE_TEAM (ID)
+[EL Fine]: sql: 2022-05-16 13:44:32.325--ServerSession(225686866)--Connection(2122079674)--CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+[EL Fine]: sql: 2022-05-16 13:44:32.326--ServerSession(225686866)--Connection(449576988)--DELETE FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:32.326--ServerSession(225686866)--Connection(1171958575)--SELECT * FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+[EL Fine]: sql: 2022-05-16 13:44:32.326--ServerSession(225686866)--Connection(1578706201)--INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+[EL Fine]: sql: 2022-05-16 13:44:32.33--ClientSession(419212869)--Connection(1226362114)--SELECT USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME FROM APP_USER WHERE (USERNAME = ?)
+	bind => [admin]
+16-05-2022 13:44:32.330 [main] INFO  c.c.k.e.r.s.SystemInitializer - Generated admin user with credentials admin/adm1n
+[EL Fine]: sql: 2022-05-16 13:44:32.387--ClientSession(419212869)--Connection(1226362114)--UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind => [50, SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:32.388--ClientSession(419212869)--Connection(1226362114)--SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind => [SEQ_GEN]
+[EL Fine]: sql: 2022-05-16 13:44:32.389--ClientSession(419212869)--Connection(1226362114)--INSERT INTO APP_USER (USER_ID, AGE, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1, 0, none, System, Administrator, $2a$10$a97BD.ZhzXJYjmjOH19B4eTWZRu7nkSI46B6aI0ZZOeLAjqLqlguy, ADMIN, admin]
+16-05-2022 13:44:32.409 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/'], []
+16-05-2022 13:44:32.409 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/login'], []
+16-05-2022 13:44:32.440 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+16-05-2022 13:44:32.440 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16-05-2022 13:44:32.441 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16-05-2022 13:44:32.445 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method springSecurityFilterChain in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean named 'mvcHandlerMappingIntrospector' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'mvcHandlerMappingIntrospector' in your configuration.
+
+16-05-2022 13:44:32.445 [main] ERROR o.s.t.c.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5432dca2] to prepare test instance [cz.cvut.kbss.ear.race.dao.UserDaoTest@6424c975]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:43)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:82)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:73)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'mvcHandlerMappingIntrospector' available: A Bean named mvcHandlerMappingIntrospector of type org.springframework.web.servlet.handler.HandlerMappingIntrospector is required to use MvcRequestMatcher. Please ensure Spring Security & Spring MVC are configured in a shared ApplicationContext.
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer$MvcCorsFilter.getMvcCorsFilter(CorsConfigurer.java:113)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer$MvcCorsFilter.access$000(CorsConfigurer.java:103)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.getCorsFilter(CorsConfigurer.java:97)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.configure(CorsConfigurer.java:66)
+	at org.springframework.security.config.annotation.web.configurers.CorsConfigurer.configure(CorsConfigurer.java:39)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:383)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:329)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:294)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.performBuild(WebSecurity.java:81)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:333)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 69 common frames omitted
+]]></system-out>
+  </testcase>
 </testsuite>

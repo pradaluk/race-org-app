@@ -29,7 +29,6 @@ public class TeamService {
     @Transactional
     public void create(Team team, User owner) {
         if(owner.getMembership() != null){
-            System.out.println("HEHEHEHEHE" + owner.getMembership().getMembershipId());
             if(owner.getMembership().getStatus() == TeamMembershipState.ACTIVE){
                 throw new ValidationException("Already a member of a team!");
             }

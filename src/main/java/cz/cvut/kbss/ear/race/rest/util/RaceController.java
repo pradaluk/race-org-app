@@ -26,7 +26,6 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/rest/races")
 public class RaceController {
 
@@ -52,7 +51,6 @@ public class RaceController {
      * Returns all races.
      */
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin
     public List<Race> getRaces() {
         return raceService.findAll();
     }
@@ -139,7 +137,6 @@ public class RaceController {
      */
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin
     public Race getRaceById(@PathVariable Integer id) {
         final Race r = raceService.find(id);
         if (r == null) {

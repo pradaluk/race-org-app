@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class CarService {
@@ -31,20 +32,24 @@ public class CarService {
 
     @Transactional
     public void persist(Car car) {
+        Objects.requireNonNull(car);
         dao.persist(car);
     }
 
     @Transactional
     public void update(Car car) {
+        Objects.requireNonNull(car);
         dao.update(car);
     }
 
     @Transactional
     public void remove(Car car) {
+        Objects.requireNonNull(car);
         dao.remove(car);
     }
 
     public List<Car> findByUser(User user) {
+        Objects.requireNonNull(user);
         return dao.findByUser(user);
     }
 }

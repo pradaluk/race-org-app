@@ -20,6 +20,8 @@ public class Car extends AbstractEntity{
     @ManyToOne
     private User owner;
 
+    @Column(nullable = false)
+    @Basic(optional = false)
     @Enumerated(EnumType.STRING)
     private CarClass carClass;
 

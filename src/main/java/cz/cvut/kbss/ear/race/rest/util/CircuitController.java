@@ -3,11 +3,8 @@ package cz.cvut.kbss.ear.race.rest.util;
 import cz.cvut.kbss.ear.race.exception.NotFoundException;
 import cz.cvut.kbss.ear.race.exception.ValidationException;
 import cz.cvut.kbss.ear.race.model.Circuit;
-import cz.cvut.kbss.ear.race.model.Team;
-import cz.cvut.kbss.ear.race.model.User;
 import cz.cvut.kbss.ear.race.service.CircuitService;
 import org.postgresql.util.PSQLException;
-import org.postgresql.util.ServerErrorMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.OrderBy;
-import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -34,7 +29,6 @@ public class CircuitController {
         this.circuitService = circuitService;
     }
 
-    @CrossOrigin
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Circuit> getCircuits() {
         return circuitService.findAll();

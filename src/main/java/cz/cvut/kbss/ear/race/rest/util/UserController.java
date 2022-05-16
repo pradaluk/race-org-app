@@ -22,7 +22,6 @@ import javax.annotation.security.PermitAll;
 import java.security.Principal;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/rest/users")
 public class UserController {
 
@@ -108,8 +107,8 @@ public class UserController {
     @PermitAll
     @GetMapping(value = "/isLoggedIn", produces = MediaType.APPLICATION_JSON_VALUE)
     public Boolean isLoggedIn(Principal principal) {
-        boolean isLoggedIn = false;
-        return isLoggedIn=(principal!=null) ? true : false;
+        boolean isLoggedIn =(principal!=null) ? true : false;
+        return isLoggedIn;
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
