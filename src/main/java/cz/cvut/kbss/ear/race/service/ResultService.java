@@ -20,6 +20,9 @@ public class ResultService {
 
     @Transactional
     public void update(Result result) {
+        Result orig = dao.findByDriverAndRace(result.getUser(),result.getRace());
+        orig.setStartPos(result.getStartPos());
+        orig.setFinishPos(result.getFinishPos());
         dao.update(result);
     }
 
