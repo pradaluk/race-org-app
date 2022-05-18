@@ -56,7 +56,7 @@ public class Race extends AbstractEntity {
     private Integer maxDrivers;
 
     @JsonIgnore
-    @OneToMany(mappedBy="race")
+    @OneToMany(mappedBy="race", cascade = CascadeType.REMOVE)
     private List<Result> results_race;
 
     public List<CarClass> getClasses() {
