@@ -120,7 +120,6 @@ public class UserService {
 
     @Transactional
     public void update(User user) {
-        //user.encodePassword(passwordEncoder);
         dao.update(user);
     }
 }

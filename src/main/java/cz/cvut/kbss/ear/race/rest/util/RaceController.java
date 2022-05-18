@@ -82,40 +82,6 @@ public class RaceController {
         LOG.debug("Removed race {}.", original);
     }
 
-//    /**
-//     * Adds driver to Race.
-//     *
-//     * @param id Race id
-//     * @param user_id User id
-//     */
-//    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ORGANIZER')")
-//    @PutMapping(value = "/addDriver/{id} {user_id}")
-//    public void addDriver(@PathVariable Integer id, @PathVariable Integer user_id) {
-//        Race race = raceService.find(id);
-//        User user = userService.find(user_id);
-//        if(race.getMaxDrivers() < race.getResults().size()){
-//            raceService.addDriver(race,user, car);
-//            LOG.debug("Added driver {} to race {}.",user, race);
-//        }else{
-//            throw new ValidationException("Maximum number of drivers already registerd.");
-//        }
-//    }
-//
-//    /**
-//     * Removes driver from Race.
-//     *
-//     * @param id Race id
-//     * @param user_id User id
-//     */
-//    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ORGANIZER')")
-//    @PutMapping(value = "/removeDriver/{id} {user_id}")
-//    public void removeDriver(@PathVariable Integer id, @PathVariable Integer user_id) {
-//        Race race = raceService.find(id);
-//        User user = userService.find(user_id);
-//        raceService.removeDriver(race,user);
-//        LOG.debug("Removed driver {} to race {}.",user, race);
-//    }
-
     /**
      * Creates new Race.
      *

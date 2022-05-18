@@ -39,7 +39,6 @@ public class MembershipController {
         this.securityUtils = securityUtils;
     }
 
-    //@PreAuthorize("isMember(#teamId)")
     @GetMapping(value = "/{teamId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<TeamMembership> getMemberships(@PathVariable Integer teamId) {
         return teamService.find(teamId).getMemberships().stream()
@@ -52,14 +51,12 @@ public class MembershipController {
                 securityUtils.getCurrentUser());
     }
 
-    //@PreAuthorize("hasPermission(#teamId, 'CREATOR')")
     @GetMapping(value = "/{teamId}/requests", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<JoinRequest> getJoinRequests(@PathVariable Integer teamId) {
         return teamService.find(teamId).getJoinRequests().stream()
                 .filter(j -> j.getStatus() == JoinRequestStatus.PENDING).collect(Collectors.toList());
     }
 
-    //@PreAuthorize("hasPermission(#teamId, 'CREATOR')")
     @PutMapping(value = "/{teamId}/requests")
     public ResponseEntity<Void> resolveJoinRequestToTeam(@PathVariable Integer teamId,
                                                             @RequestBody JoinRequest joinRequest) throws ValidationException {
@@ -78,14 +75,6 @@ public class MembershipController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-//    @PreAuthorize("isNotMember(#teamId)")
-//    @PutMapping(value = "/{teamId}/cancel")
-//    public ResponseEntity<Void> cancelJoinRequestToTeam(@PathVariable Integer teamId) throws ValidationException {
-//        User user = securityUtils.getCurrentUser();
-//        Team team = teamService.find(teamId);
-//        joinRequestService.cancelJoinRequest(team, user);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
 
     @PreAuthorize("hasAnyRole('ROLE_DRIVER', 'ROLE_ADMIN')")
     @DeleteMapping(value = "/{teamId}/leave")
@@ -96,7 +85,6 @@ public class MembershipController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasPermission(#teamId, 'CREATOR')")
     @DeleteMapping(value = "/{teamId}/leave/{userId}")
     public ResponseEntity<Void> kickUserFromTeam(@PathVariable Integer teamId, @PathVariable Integer userId) {
         User user = userService.find(userId);

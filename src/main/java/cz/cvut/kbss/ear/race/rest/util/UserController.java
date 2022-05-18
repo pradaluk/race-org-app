@@ -62,8 +62,8 @@ public class UserController {
      */
     @PreAuthorize("hasAnyRole('ROLE_DRIVER')")
     @PostMapping(value = "/registerForRace/{id}/{carId}")
-    public void registerForRace(Principal principal,@PathVariable Integer id, @PathVariable Integer carId) {
-        User user = this.getCurrent(principal);
+    public void registerForRace(@PathVariable Integer id, @PathVariable Integer carId) {
+        User user = this.getCurrent();
         Race race = raceService.find(id);
         Car car = carService.find(carId);
         boolean success = userService.registerForRace(race,user, car);
@@ -79,8 +79,8 @@ public class UserController {
      */
     @PreAuthorize("hasAnyRole('ROLE_DRIVER')")
     @PostMapping(value = "/withdraw/{id}")
-    public void withdrawFromRace(Principal principal,@PathVariable Integer id) {
-        final User user = userService.find(getCurrent(principal).getId());
+    public void withdrawFromRace(@PathVariable Integer id) {
+        final User user = userService.find(getCurrent().getId());
         final Race race = raceService.find(id);
         boolean success = false;
         success = userService.withdrawFromRace(race,user);
@@ -94,14 +94,7 @@ public class UserController {
      */
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_DRIVER', 'ROLE_GUEST', 'ROLE_ORGANIZER')")
     @GetMapping(value = "/current", produces = MediaType.APPLICATION_JSON_VALUE)
-    public User getCurrent(Principal principal) {
-//        if(principal!=null){
-//            final AuthenticationToken auth = (AuthenticationToken) principal;
-//            LOG.info("Current user is {}", auth.getPrincipal().getUser());
-//            return auth.getPrincipal().getUser();
-//        }
-//        LOG.info("No current user");
-//        return null;
+    public User getCurrent() {
         final User user = userService.find(securityUtils.getCurrentUser().getId());
         return user;
     }

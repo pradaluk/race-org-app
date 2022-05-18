@@ -62,7 +62,6 @@ public class TeamMembershipService {
 
         MembershipId membershipId = new MembershipId(team.getId(), user.getId());
         TeamMembership membership = find(membershipId);
-        // should check membership if exists
 
         membership.setStatus(TeamMembershipState.EXPIRED);
 

@@ -62,8 +62,8 @@ public class TeamController {
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_DRIVER')")
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public ResponseEntity<Void> updateTeam(Principal principal,@PathVariable Integer id, @RequestBody Team team) {
-        final User user = userService.find(userController.getCurrent(principal).getId());
+    public ResponseEntity<Void> updateTeam(@PathVariable Integer id, @RequestBody Team team) {
+        final User user = userService.find(userController.getCurrent().getId());
         final Team original = teamService.find(id);
         if(original.getTeamOwner().getUsername().equals(user.getUsername()) || user.isAdmin()){
             if (!original.getId().equals(team.getId())) {
@@ -89,8 +89,8 @@ public class TeamController {
      */
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_DRIVER')")
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<Void> removeTeam(Principal principal,@PathVariable Integer id) {
-        final User user = userService.find(userController.getCurrent(principal).getId());
+    public ResponseEntity<Void> removeTeam(@PathVariable Integer id) {
+        final User user = userService.find(userController.getCurrent().getId());
         final Team team = teamService.find(id);
         if( user.isAdmin() || team.getTeamOwner().getUsername().equals(user.getUsername()) ){
             final Team original = getTeamById(id);

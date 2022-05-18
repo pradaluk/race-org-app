@@ -5,6 +5,8 @@ import cz.cvut.kbss.ear.race.config.PersistenceConfig;
 import cz.cvut.kbss.ear.race.config.ServiceConfig;
 import cz.cvut.kbss.ear.race.model.Car;
 import cz.cvut.kbss.ear.race.model.CarClass;
+import cz.cvut.kbss.ear.race.model.User;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
-import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ServiceConfig.class, PersistenceConfig.class})
@@ -32,12 +37,10 @@ import static org.junit.Assert.assertEquals;
 @ComponentScan(basePackageClasses = RacingOrgApp.class)
 public class CarServiceTest extends BaseServiceTestRunner{
 
-
-    @PersistenceContext
-    private EntityManager em;
-
     @Autowired
     private CarService carService;
+    @Autowired
+    private UserService userService;
 
 //    @Test
 //    public void saveCarFromInvalidParamsDoesntSaveCar() {
@@ -46,17 +49,58 @@ public class CarServiceTest extends BaseServiceTestRunner{
 //        assertThrows(ValidationException.class,()->{sut.saveFromParams("Man","Focus",2004);});
 //        assertThrows(ConstraintViolationException.class,()->{sut.saveFromParams("Ford","Focus",1700);});
 //    }
-    @Test
-    public void NewCarDoesntThrowException(){
-        Car audi = new Car();
+
+    Car audi = new Car();
+
+    @Before
+    public void saveCar(){
         audi.setId(1);
         audi.setMaker("Audi");
         audi.setModel("LMS");
         audi.setCarClass(CarClass.GT3);
-        em.persist(audi);
+        carService.persist(audi);
+    }
+
+    @Test
+    public void NewCar_FoundInDatabase(){
 
         Car findCar = carService.find(1);
         assertEquals(audi,findCar);
-        //assertThrows(NullPointerException.class,()->{carService.persist(audi);});
+
+    }
+    @Test
+    public void RemoveCar_NotFoundInDatabase(){
+        Car findCar = carService.find(1);
+        assertEquals(audi,findCar);
+        carService.remove(audi);
+        findCar = carService.find(1);
+        assertEquals(null, findCar);
+    }
+    @Test
+    public void UpdateCar_CarUpdated(){
+        Car findCar = carService.find(1);
+        assertEquals(audi,findCar);
+        audi.setModel("LMS EVO");
+        carService.update(audi);
+        findCar = carService.find(1);
+        assertEquals(audi, findCar);
+    }
+    @Test
+    public void findCarByUser(){
+        User user = new User();
+        user.setPassword("test");
+        user.setUsername("test");
+        user.setEmail("test");
+        user.setFirstName("test");
+        user.setLastName("test");
+        user.setAge(20);
+        audi.setOwner(user);
+        userService.persist(user);
+
+        carService.persist(audi);
+        List<Car> findCars = carService.findByUser(user);
+        List<Car> audiList = new ArrayList<Car>();
+        audiList.add(audi);
+        assertEquals(audiList,findCars);
     }
 }
