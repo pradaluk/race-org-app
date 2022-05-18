@@ -23,7 +23,7 @@ public class ResultService {
         Result orig = dao.findByDriverAndRace(result.getUser(),result.getRace());
         orig.setStartPos(result.getStartPos());
         orig.setFinishPos(result.getFinishPos());
-        dao.update(result);
+        dao.update(orig);
     }
 
     @Transactional
