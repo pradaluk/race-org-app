@@ -62,9 +62,11 @@ public class User extends AbstractEntity {
     @OneToMany(mappedBy = "user")
     private List<Result> results_user;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
     private TeamMembership membership;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
     private List<JoinRequest> joinRequests = new ArrayList<>();
 
