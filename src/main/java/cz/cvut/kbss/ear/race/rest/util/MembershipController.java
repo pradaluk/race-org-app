@@ -68,7 +68,7 @@ public class MembershipController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    //@PreAuthorize("isNotMember(#teamId)")
+    @PreAuthorize("hasAnyRole('ROLE_DRIVER', 'ROLE_ADMIN')")
     @PutMapping(value = "/{teamId}/join", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> postJoinRequestToTeam(@PathVariable Integer teamId,
                                                          @RequestBody JoinRequest joinRequest) throws ValidationException {
@@ -87,7 +87,7 @@ public class MembershipController {
 //        return new ResponseEntity<>(HttpStatus.OK);
 //    }
 
-    //@PreAuthorize("isMember(#teamId)")
+    @PreAuthorize("hasAnyRole('ROLE_DRIVER', 'ROLE_ADMIN')")
     @DeleteMapping(value = "/{teamId}/leave")
     public ResponseEntity<Void> leaveTeam(@PathVariable Integer teamId) {
         User user = userService.find(securityUtils.getCurrentUser().getId());;

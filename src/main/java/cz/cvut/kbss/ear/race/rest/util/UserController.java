@@ -2,6 +2,7 @@ package cz.cvut.kbss.ear.race.rest.util;
 
 import cz.cvut.kbss.ear.race.model.Car;
 import cz.cvut.kbss.ear.race.model.Race;
+import cz.cvut.kbss.ear.race.model.Role;
 import cz.cvut.kbss.ear.race.model.User;
 import cz.cvut.kbss.ear.race.security.SecurityUtils;
 import cz.cvut.kbss.ear.race.security.model.UserDetails;
@@ -121,7 +122,7 @@ public class UserController {
     @PutMapping(value = "/{id}")
     public ResponseEntity<Void> updateUser(@PathVariable Integer id, @RequestBody User user) {
         User current = securityUtils.getCurrentUser();
-        if(current.getId() != id){
+        if(current.getId() != id && current.getRole() != Role.ADMIN){
             LOG.error("Not updating current user.");
             final HttpHeaders headers = RestUtils.createLocationHeaderFromCurrentUri("");
             return new ResponseEntity<>(headers, HttpStatus.FORBIDDEN);

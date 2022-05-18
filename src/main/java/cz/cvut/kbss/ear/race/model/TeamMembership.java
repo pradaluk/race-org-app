@@ -44,7 +44,7 @@ public class TeamMembership implements Serializable {
         return team;
     }
 
-    public void setProject(Team team) {
+    public void setTeam(Team team) {
         this.team = team;
     }
 

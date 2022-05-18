@@ -54,7 +54,7 @@ public class CarController {
         LOG.debug("Updated car {}.", original);
     }
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_DRIVER')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void removeCar(@PathVariable Integer id) {

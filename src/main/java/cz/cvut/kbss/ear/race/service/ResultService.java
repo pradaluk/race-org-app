@@ -24,6 +24,11 @@ public class ResultService {
     }
 
     @Transactional
+    public void persist(Result result) {
+        dao.persist(result);
+    }
+
+    @Transactional
     public Result findByDriverAndRace(User user, Race race) {
         return dao.findByDriverAndRace(user, race);
     }

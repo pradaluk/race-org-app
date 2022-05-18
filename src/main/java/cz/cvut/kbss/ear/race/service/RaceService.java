@@ -44,24 +44,6 @@ public class RaceService {
         dao.persist(race);
         return race;
     }
-    @Transactional
-    public void addDriver(Race race, User driver, Car car) {
-        dao.addResult(race, driver, car);
-        //check if already in ?
-        Objects.requireNonNull(race);
-        Objects.requireNonNull(driver);
-        dao.update(race);
-    }
-
-    @Transactional
-    public void removeDriver(Race race, User driver) {
-        Objects.requireNonNull(race);
-        Objects.requireNonNull(driver);
-        Result res = resDao.findByDriverAndRace(driver, race);
-        race.removeResult(res);
-        dao.update(race);
-        resDao.remove(res);
-    }
 
     @Transactional
     public List<User> getDrivers(Race race) {

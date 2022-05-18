@@ -66,7 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().authorizeRequests().anyRequest().permitAll().and()
+        http.authorizeRequests().anyRequest().permitAll().and()
             .exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
             .and().headers().frameOptions().sameOrigin()
             .and().authenticationProvider(authenticationProvider)

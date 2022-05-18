@@ -36,12 +36,6 @@ public class TeamMembershipService {
         return membershipDao.find(id);
     }
 
-    @Transactional
-    public void persist(TeamMembership membership) {
-        Objects.requireNonNull(membership);
-        membershipDao.persist(membership);
-    }
-
     public void createMembership(Team team, User user, TeamRole role) {
         Objects.requireNonNull(team);
         Objects.requireNonNull(user);
