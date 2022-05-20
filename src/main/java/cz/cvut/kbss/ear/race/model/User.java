@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.sun.istack.internal.NotNull;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
@@ -31,26 +32,32 @@ public class User extends AbstractEntity {
     }
     public void setId(Integer id) {this.id = id;}
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String firstName;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String lastName;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false, unique = true)
     private String username;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String password;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer age;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String email;

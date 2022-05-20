@@ -14,6 +14,7 @@ import java.util.Date;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 public class JoinRequest {
+
     @Column
     private String message;
 

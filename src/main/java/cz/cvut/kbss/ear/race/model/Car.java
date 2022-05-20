@@ -1,5 +1,7 @@
 package cz.cvut.kbss.ear.race.model;
 
+import com.sun.istack.internal.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,11 +10,12 @@ import javax.persistence.*;
        @NamedQuery(name = "Car.getByUser", query = "SELECT c from Car c WHERE c.owner = :user")
 })
 public class Car extends AbstractEntity{
-
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String maker;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String model;
@@ -20,6 +23,7 @@ public class Car extends AbstractEntity{
     @ManyToOne
     private User owner;
 
+    @NotNull
     @Column(nullable = false)
     @Basic(optional = false)
     @Enumerated(EnumType.STRING)

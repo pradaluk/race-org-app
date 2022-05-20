@@ -1,5 +1,7 @@
 package cz.cvut.kbss.ear.race.model;
 
+import com.sun.istack.internal.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,10 +12,12 @@ import javax.persistence.*;
 })
 public class Circuit extends AbstractEntity{
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false, unique = true)
     private String name;
 
+    @NotNull
     @Basic(optional = false)
     @Column(nullable = false)
     private String location;
