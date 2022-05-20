@@ -1,9 +1,9 @@
 package cz.cvut.kbss.ear.race.model;
 
 import com.fasterxml.jackson.annotation.*;
-import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -36,25 +36,25 @@ public class Race extends AbstractEntity {
     @Column(name = "RACE_ID")
     private Integer id;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String name;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false, columnDefinition = "date")
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date race_date;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false, columnDefinition = "date")
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date eor_date;
 
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer maxDrivers;

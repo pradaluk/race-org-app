@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cz.cvut.kbss.ear.race.service.CarServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! - in cz.cvut.kbss.ear.race.service.CarServiceTest
-NewCarDoesntThrowException  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'persistenceConfig': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.789 s - in cz.cvut.kbss.ear.race.service.CarServiceTest

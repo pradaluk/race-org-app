@@ -2,15 +2,13 @@ package cz.cvut.kbss.ear.race.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.sun.istack.internal.NotNull;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "APP_USER")
@@ -32,32 +30,32 @@ public class User extends AbstractEntity {
     }
     public void setId(Integer id) {this.id = id;}
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String firstName;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String lastName;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false, unique = true)
     private String username;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String password;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer age;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String email;

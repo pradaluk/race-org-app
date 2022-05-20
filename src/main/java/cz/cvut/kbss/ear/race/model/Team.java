@@ -2,9 +2,9 @@ package cz.cvut.kbss.ear.race.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
         property = "id")
 public class Team extends AbstractEntity{
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false, unique = true)
     private String name;

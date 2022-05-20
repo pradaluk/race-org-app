@@ -1,8 +1,8 @@
 package cz.cvut.kbss.ear.race.model;
 
-import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "RACE_CIRCUIT")
@@ -12,12 +12,12 @@ import javax.persistence.*;
 })
 public class Circuit extends AbstractEntity{
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false, unique = true)
     private String name;
 
-    @NotNull
+    @NotBlank
     @Basic(optional = false)
     @Column(nullable = false)
     private String location;

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: cz.cvut.kbss.ear.race.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.272 s - in cz.cvut.kbss.ear.race.service.UserServiceTest
